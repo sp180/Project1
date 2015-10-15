@@ -34,16 +34,18 @@ player scoreboards
 
 Notes:
 
+create a start game button to initiate the game. the game is initiated by a random phrase being chosen from the phrase bank and put into the board.
+
 X - create a phrase bank from which to gather phrases to put on the board
 
 X - pick a phrase at random from the phrase bank
 
 put the phrase on the board in such a way that the individual letters are:
-separated,
-in order,
-the spaces are treated in such a way that they do not need to be guessed,
-hidden,
-can be unhidden if a player correctly guesses a letter, remains unhidden
+X - separated,
+X - in order,
+OO - the spaces are treated in such a way that they do not need to be guessed,
+OO - hidden,
+OO - can be unhidden if a player correctly guesses a letter, remains unhidden
 
 X - create an input field where the players can guess a letter
 X - create an input field where the players can guess a the phrase
