@@ -38,12 +38,10 @@ var startingGame = function () {
 }
 
 //button, starts the game
-startButton = document.getElementById('start');
-startButton.addEventListener('click', startingGame);
+startButton = document.getElementById('start').addEventListener('click', startingGame);
 
 //button, returns a randomly chosen object from wheelArray
-spinTheWheelButton = document.getElementById('spin');
-spinTheWheelButton.addEventListener('click', randomWheelPick);
+spinTheWheelButton = document.getElementById('spin').addEventListener('click', randomWheelPick);
 
 
 

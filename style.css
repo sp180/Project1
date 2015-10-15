@@ -1,0 +1,14 @@
+.game {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+#board {
+  border: 1px solid black;
+  margin: auto;
+  height: 400px;
+  width: 800px;
+}
