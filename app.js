@@ -9,13 +9,15 @@ var theBoard;
 var theChosenPhrase;
 var theWheelPick;
 var startButton;
+var spinTheWheelButton;
 var playerOneScore = [];
 var playerTwoScore = [];
-var test = function () {console.log('this is working')};
+var test = function () {console.log('this button is working')};
 
 //function, picks a random money object for player points
 var randomWheelPick = function () {
   theWheelPick = wheelArray[Math.floor(Math.random()*wheelArray.length)];
+  console.log(theWheelPick);
 }
 
 //function, starts a new game by picking a phrase and putting it on the board
@@ -25,16 +27,29 @@ var startingGame = function () {
   var randomPhrasePick = function () {
     theChosenPhrase = phraseBankArray[Math.floor(Math.random()*phraseBankArray.length)];
   }
-  //function, populates the board with the characters of the randomly chosen phrase
+  randomPhrasePick();
+
+  //function, populates the board with the characters of theChosenPhrase
   var populateTheBoard = function () {
     theBoard = theChosenPhrase.split('');
   }
+  populateTheBoard();
+  console.log(theBoard);
 }
-
-randomWheelPick();
-console.log(theWheelPick);
-console.log(theBoard);
 
 //button, starts the game
 startButton = document.getElementById('start');
-startButton.addEventListener('click', test);
+startButton.addEventListener('click', startingGame);
+
+//button, returns a randomly chosen object from wheelArray
+spinTheWheelButton = document.getElementById('spin');
+spinTheWheelButton.addEventListener('click', randomWheelPick);
+
+
+
+
+
+
+
+
+//.

@@ -34,7 +34,18 @@ player scoreboards
 
 Notes:
 
-create a start game button to initiate the game. the game is initiated by a random phrase being chosen from the phrase bank and put into the board.
+Order of events
+ - start game
+ - choose a phrase
+ - put chosen phrase on the board
+ - have players guess the letters
+ - players guess letters until phrase is displayed
+ - player with highest score at end of round wins
+ - restart game
+
+X - create a start game button to initiate the game. the game is initiated by a random phrase being chosen from the phrase bank and put into the board.
+
+X - create a button that allows a player to 'spin the wheel'
 
 X - create a phrase bank from which to gather phrases to put on the board
 
