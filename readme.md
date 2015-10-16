@@ -55,8 +55,8 @@ put the phrase on the board in such a way that the individual letters are:
 - X - separated,
 - X - in order,
 - X - show spaces,
-- OO - hidden,
-- OO - can be unhidden if a player correctly guesses a letter, remains unhidden
+- X - hidden,
+- X - can be unhidden if a player correctly guesses a letter & remains unhidden
 
 X - create an input field where the players can guess a letter
 X - create an input field where the players can guess a the phrase

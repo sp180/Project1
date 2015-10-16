@@ -41,9 +41,10 @@ var startingGame = function () {
         tileDiv.innerHTML = '_';
       }
       else {
-        tileDiv.innerHTML = theBoard[i];
+        tileDiv.innerHTML = ' ';
         tileDiv.id = theBoard[i];
       }
+      //create a function in which to replace the letters in the divTiles with a space " ". These divTiles should retain their id attributes. Based on any given divTile's id, that divTile should be findable and it's corresponding letter could be filled in
     }
   }
   populateTheBoard();
