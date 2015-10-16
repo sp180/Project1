@@ -32,6 +32,18 @@ var startingGame = function () {
   //function, populates the board with the characters of theChosenPhrase
   var populateTheBoard = function () {
     theBoard = theChosenPhrase.split('');
+    var boardDiv = document.getElementById('board');
+    for (var i = 0; i < theBoard.length; i++) {
+      var tileDiv = document.createElement('div');
+      tileDiv.className = 'tile';
+      boardDiv.appendChild(tileDiv);
+      if (theBoard[i] == ' ') {
+        tileDiv.innerHTML = '_';
+      }
+      else {
+        tileDiv.innerHTML = theBoard[i];
+      }
+    }
   }
   populateTheBoard();
   console.log(theBoard);
