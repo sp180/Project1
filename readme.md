@@ -51,7 +51,7 @@ X - create a phrase bank from which to gather phrases to put on the board
 
 X - pick a phrase at random from the phrase bank
 
-put the phrase on the board in such a way that the individual letters are:
+x - put the phrase on the board in such a way that the individual letters are:
 - X - separated,
 - X - in order,
 - X - show spaces,
