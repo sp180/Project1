@@ -52,11 +52,11 @@ X - create a phrase bank from which to gather phrases to put on the board
 X - pick a phrase at random from the phrase bank
 
 put the phrase on the board in such a way that the individual letters are:
-X - separated,
-X - in order,
-OO - show spaces,
-OO - hidden,
-OO - can be unhidden if a player correctly guesses a letter, remains unhidden
+- X - separated,
+- X - in order,
+- X - show spaces,
+- OO - hidden,
+- OO - can be unhidden if a player correctly guesses a letter, remains unhidden
 
 X - create an input field where the players can guess a letter
 X - create an input field where the players can guess a the phrase

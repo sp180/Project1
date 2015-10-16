@@ -42,11 +42,11 @@ var startingGame = function () {
       }
       else {
         tileDiv.innerHTML = theBoard[i];
+        tileDiv.id = theBoard[i];
       }
     }
   }
   populateTheBoard();
-  console.log(theBoard);
 }
 
 //button, starts the game
