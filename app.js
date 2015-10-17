@@ -13,13 +13,13 @@ var spinTheWheelButton;
 var letterInput = document.getElementById('letterInputField');
 var phraseInput = document.getElementById('phraseInputField');
 var vowelInput = document.getElementById('vowelInputField');
-var test = function () {console.log('this button is working')};
-
-//global variables being worked on
 var playerChoice;
 var guessLetterButton;
 var guessPhraseButton;
 var buyVowelButton;
+var test = function () {console.log('this button is working')};
+
+//global variables being worked on
 
 //global variables to be used
 var playerOneScore = [];
@@ -55,28 +55,51 @@ var startingGame = function () {
   populateTheBoard();
 }
 
-
-
-
+//function, checks if a consonant a player has chosen is on the board or not
 var playerChoice = function () {
   var tileDivs = document.getElementsByClassName('tile');
-  if (letterInput.value != document.getElementById(letterInput.value).id) {
-    console.log('Sorry, that is not on the board');
-  }
-  for (var i = 0; i < tileDivs.length; i++) {
-    if (letterInput.value == tileDivs[i].textContent) {
-      console.log('Sorry, that is already on the board');
-    }
-  }
   for (var i = 0; i < tileDivs.length; i++) {
     if (letterInput.value == tileDivs[i].id) {
       tileDivs[i].textContent = tileDivs[i].id;
     }
+    else if (letterInput.value != tileDivs[i].id) {
+      console.log('Sorry, that is not on the board');
+    }
+    else if (letterInput.value == tileDivs[i].textContent) {
+      console.log('Sorry, that is already on the board');
+    }
   }
 }
 
+//function, checks if a vowel a player has chosen is on the board or not
+var playerBuy = function () {
+  var tileDivs = document.getElementsByClassName('tile');
+  for (var i = 0; i < tileDivs.length; i++) {
+    if (vowelInput.value == tileDivs[i].id) {
+      tileDivs[i].textContent = tileDivs[i].id;
+    }
+    else if (vowelInput.value != tileDivs[i].id) {
+      console.log('Sorry, that is not on the board');
+    }
+    else if (vowelInput.value == tileDivs[i].textContent) {
+      console.log('Sorry, that is already on the board');
+    }
+  }
+}
 
-
+//function, checks if a phrase a player has guessed is on the board or not
+var solveThePuzzle = function () {
+  var tileDivs = document.getElementsByClassName('tile');
+  if (phraseInput.value == theChosenPhrase) {
+    console.log('Congratulations, you win');
+    for (var i = 0; i < tileDivs.length; i++) {
+      tileDivs[i].textContent = tileDivs[i].id;
+    }
+  }
+  else if (phraseInput.value != theChosenPhrase) {
+    console.log('Sorry, guess again');
+  }
+}
 
 
 
@@ -94,10 +117,10 @@ startButton = document.getElementById('start').addEventListener('click', startin
 guessLetterButton = document.getElementById('guessLetter').addEventListener('click', playerChoice);
 
 //button, checks the phrase input field for a phrase and then executes a function that checks the phrase formed by the div id's which were created from the start of the game
-guessPhraseButton = document.getElementById('guessPhrase').addEventListener('click', test);
+guessPhraseButton = document.getElementById('guessPhrase').addEventListener('click', solveThePuzzle);
 
 //button, checks the buy a vowel input field for a vowel and then executes a function that checks the divs created from the start of the game for an id match
-buyVowelButton = document.getElementById('buyVowel').addEventListener('click', test);
+buyVowelButton = document.getElementById('buyVowel').addEventListener('click', playerBuy);
 
 //button, returns a randomly chosen object from wheelArray
 spinTheWheelButton = document.getElementById('spin').addEventListener('click', randomWheelPick);

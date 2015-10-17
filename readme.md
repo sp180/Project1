@@ -67,7 +67,7 @@ X - create a button for each input field
 
 X - change the position of the randomWheelPick function to below the startingGame function
 
-connect the guess letter button to an input field so that when a letter is typed into the field, a function is triggered to check if the letter that is typed into the input can be found among the div id's generated at the start of the game
+X - connect the guess letter button to an input field so that when a letter is typed into the field, a function is triggered to check if the letter that is typed into the input can be found among the div id's generated at the start of the game
 
 
 OO - create a function that allows a player to guess a letter in the phrase.
@@ -79,6 +79,12 @@ OO - create a function that allows a player to guess a letter in the phrase.
 
 OO - connect the current wheelPick to the player's guess. Consider using a function
 
+
+What's left:
+keep track of player turn
+Keep track of player scores
+attach random wheel value to player guesses
+have guesses affect player score
 
 
 
