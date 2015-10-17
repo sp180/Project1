@@ -44,10 +44,10 @@ var startingGame = function () {
       tileDiv.className = 'tile';
       boardDiv.appendChild(tileDiv);
       if (theBoard[i] == ' ') {
-        tileDiv.innerHTML = '_';
+        tileDiv.textContent = '_';
       }
       else {
-        tileDiv.innerHTML = ' ';
+        tileDiv.textContent = ' ';
         tileDiv.id = theBoard[i];
       }
     }
@@ -60,15 +60,17 @@ var startingGame = function () {
 
 var playerChoice = function () {
   var tileDivs = document.getElementsByClassName('tile');
+  if (letterInput.value != document.getElementById(letterInput.value).id) {
+    console.log('Sorry, that is not on the board');
+  }
   for (var i = 0; i < tileDivs.length; i++) {
-    if (letterInput.value == tileDivs[i].id) {
-      tileDivs[i].innerHTML = tileDivs[i].id;
-    }
-    else if (letterInput.value == tileDivs[i].innerHTML) {
+    if (letterInput.value == tileDivs[i].textContent) {
       console.log('Sorry, that is already on the board');
     }
-    else if (letterInput.value != tileDivs[i].id) {
-      console.log('Sorry, that is not on the board');
+  }
+  for (var i = 0; i < tileDivs.length; i++) {
+    if (letterInput.value == tileDivs[i].id) {
+      tileDivs[i].textContent = tileDivs[i].id;
     }
   }
 }
