@@ -70,7 +70,7 @@ X - change the position of the randomWheelPick function to below the startingGam
 X - connect the guess letter button to an input field so that when a letter is typed into the field, a function is triggered to check if the letter that is typed into the input can be found among the div id's generated at the start of the game
 
 
-OO - create a function that allows a player to guess a letter in the phrase.
+OX - create a function that allows a player to guess a letter in the phrase.
 - OO - if the player guesses correctly
   - XX - replace the space in the div with the guessed letter based on the id attribute
   - OO - depending on how many letters are found of the correct guess, multiply that by the current wheelPick amount

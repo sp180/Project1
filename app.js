@@ -18,10 +18,15 @@ var guessLetterButton;
 var guessPhraseButton;
 var buyVowelButton;
 var test = function () {console.log('this button is working')};
+var phraseLettersArray = [];
+var guessedLettersArray = [];
+var tileDivs;
 
 //global variables being worked on
 
 //global variables to be used
+var playerOneTurn;
+var playerTwoTurn;
 var playerOneScore = [];
 var playerTwoScore = [];
 
@@ -50,39 +55,62 @@ var startingGame = function () {
         tileDiv.textContent = ' ';
         tileDiv.id = theBoard[i];
       }
+      phraseLettersArray.push(tileDiv.id);
     }
+    tileDivs = document.getElementsByClassName('tile');
   }
   populateTheBoard();
 }
 
+var playerTurn = function () {
+
+}
+
+
+
+
+
+
+
+
 //function, checks if a consonant a player has chosen is on the board or not
 var playerChoice = function () {
-  var tileDivs = document.getElementsByClassName('tile');
-  for (var i = 0; i < tileDivs.length; i++) {
-    if (letterInput.value == tileDivs[i].id) {
-      tileDivs[i].textContent = tileDivs[i].id;
-    }
-    else if (letterInput.value != tileDivs[i].id) {
-      console.log('Sorry, that is not on the board');
-    }
-    else if (letterInput.value == tileDivs[i].textContent) {
-      console.log('Sorry, that is already on the board');
+  var checkForMatch = function(element, index, array) {
+    return element == letterInput.value;
+  }
+  if (guessedLettersArray.some(checkForMatch) == true) {
+    console.log('Sorry, that is already on the board');
+  }
+  else if (phraseLettersArray.some(checkForMatch) == false) {
+    console.log('Sorry, that is not on the board');
+  }
+  else {
+    for (var i = 0; i < tileDivs.length; i++) {
+      if (letterInput.value == tileDivs[i].id) {
+        tileDivs[i].textContent = tileDivs[i].id;
+        guessedLettersArray.push(tileDivs[i].id);
+      }
     }
   }
 }
 
 //function, checks if a vowel a player has chosen is on the board or not
 var playerBuy = function () {
-  var tileDivs = document.getElementsByClassName('tile');
-  for (var i = 0; i < tileDivs.length; i++) {
-    if (vowelInput.value == tileDivs[i].id) {
-      tileDivs[i].textContent = tileDivs[i].id;
-    }
-    else if (vowelInput.value != tileDivs[i].id) {
-      console.log('Sorry, that is not on the board');
-    }
-    else if (vowelInput.value == tileDivs[i].textContent) {
-      console.log('Sorry, that is already on the board');
+  var checkForMatch = function(element, index, array) {
+    return element == vowelInput.value;
+  }
+  if (guessedLettersArray.some(checkForMatch) == true) {
+    console.log('Sorry, that is already on the board');
+  }
+  else if (phraseLettersArray.some(checkForMatch) == false) {
+    console.log('Sorry, that is not on the board');
+  }
+  else {
+    for (var i = 0; i < tileDivs.length; i++) {
+      if (vowelInput.value == tileDivs[i].id) {
+        tileDivs[i].textContent = tileDivs[i].id;
+        guessedLettersArray.push(tileDivs[i].id);
+      }
     }
   }
 }
@@ -100,8 +128,6 @@ var solveThePuzzle = function () {
     console.log('Sorry, guess again');
   }
 }
-
-
 
 //function, picks a random money object for player points
 var randomWheelPick = function () {
