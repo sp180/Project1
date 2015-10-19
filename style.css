@@ -23,3 +23,12 @@
   font-family: sans-serif;
   float: left;
 }
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
