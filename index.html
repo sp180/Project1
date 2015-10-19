@@ -11,9 +11,19 @@
         <div id="board"></div>
         <button id="start">Start</button>
         <button id="spin">Spin The Wheel</button>
-        <input id="letterInputField"></input><button id="guessLetter">Guess Letter</button>
-        <input id="phraseInputField"></input><button id="guessPhrase">Guess Phrase</button>
-        <input id="vowelInputField"></input><button id="buyVowel">Buy A Vowel</button>
+        <input id="letterInputField" maxlength="1"></input>
+        <button id="guessLetter">Guess Letter</button>
+        <input id="phraseInputField"></input>
+        <button id="guessPhrase">Guess Phrase</button>
+        <input id="vowelInputField" maxlength="1"></input>
+        <button id="buyVowel">Buy A Vowel</button>
+        <ul>
+          <li id="currentTurn"></li>
+          <li id="wheelValue"></li>
+          <li id="player1score"></li>
+          <li id="player2score"></li>
+          <li id="player3score"></li>
+        </ul>
         <script src="app.js"></script>
     </div>
   </body>
