@@ -65,6 +65,7 @@ X - create an input field where the players can buy a value
 
 X - create a button for each input field
 
+<<<<<<< HEAD
 OO - change the position of the randomWheelPick function to below the startingGame function
 
 OO - create a function that allows a player to guess a letter in the phrase.
@@ -79,6 +80,36 @@ OO - connect the current wheelPick to the player's guess. Consider using a funct
 
 
 
+=======
+X - change the position of the randomWheelPick function to below the startingGame function
+
+X - connect the guess letter button to an input field so that when a letter is typed into the field, a function is triggered to check if the letter that is typed into the input can be found among the div id's generated at the start of the game
+
+
+XX - create a function that allows a player to guess a letter in the phrase.
+- XX - if the player guesses correctly
+  - XX - replace the space in the div with the guessed letter based on the id attribute
+  - XX - depending on how many letters are found of the correct guess, multiply that by the current wheelPick amount
+- XX - if the player guesses incorrectly
+  - XX - it is the next player's turn
+
+XX - connect the current wheelPick to the player's guess. Consider using a function
+
+
+XX - What's left:
+XX - keep track of player turn
+XX - Keep track of player scores
+XX - attach random wheel value to player guesses
+XX - have guesses affect player score
+
+Things left that can be added:
+XX - display the current player turn
+XX - display player scores
+XX - limit what can be entered into the letter fields
+- XX - consonants only in the consonants input
+- XX - vowels only in the vowels input
+
+>>>>>>> master
 
 
 
