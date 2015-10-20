@@ -4,9 +4,6 @@ var phraseBankArray = ['THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG', 'THESE BO
 //the wheel, which contains values that get multiplied by the amount of correct letters that appear on the board at the time of guessing
 var wheelArray = ['100', '150', '200', '250', '300', '350', '400', '450', '500', '550', '600', '650', '750', '800', '850', '900', '950', '1000', '1050', '1100', '1150', '1200', '1250', '1300'];
 
-<<<<<<< HEAD
-//global variables
-=======
 //consonants array
 var consonantsArray = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X','Y','Z'];
 
@@ -14,22 +11,11 @@ var consonantsArray = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','
 var vowelsArray = ['A','E','I','O','U'];
 
 //global variables in use
->>>>>>> master
 var theBoard;
 var theChosenPhrase;
 var theWheelPick;
 var startButton;
 var spinTheWheelButton;
-<<<<<<< HEAD
-var playerOneScore = [];
-var playerTwoScore = [];
-var test = function () {console.log('this button is working')};
-
-//function, picks a random money object for player points
-var randomWheelPick = function () {
-  theWheelPick = wheelArray[Math.floor(Math.random()*wheelArray.length)];
-  console.log(theWheelPick);
-=======
 var letterInput = document.getElementById('letterInputField');
 var phraseInput = document.getElementById('phraseInputField');
 var vowelInput = document.getElementById('vowelInputField');
@@ -62,7 +48,6 @@ var showOnlyWheelButton = function () {
   document.getElementById('phraseInputField').style.visibility = 'hidden';
   document.getElementById('buyVowel').style.visibility = 'hidden';
   document.getElementById('vowelInputField').style.visibility = 'hidden';
->>>>>>> master
 }
 
 //function, starts a new game by picking a phrase and putting it on the board
@@ -83,22 +68,6 @@ var startingGame = function () {
       tileDiv.className = 'tile';
       boardDiv.appendChild(tileDiv);
       if (theBoard[i] == ' ') {
-<<<<<<< HEAD
-        tileDiv.innerHTML = '_';
-      }
-      else {
-        tileDiv.innerHTML = ' ';
-        tileDiv.id = theBoard[i];
-      }
-    }
-  }
-  populateTheBoard();
-}
-
-//button, starts the game
-startButton = document.getElementById('start').addEventListener('click', startingGame);
-
-=======
         tileDiv.textContent = '_';
       }
       else {
@@ -283,7 +252,6 @@ guessPhraseButton = document.getElementById('guessPhrase').addEventListener('cli
 //button, checks the buy a vowel input field for a vowel and then executes a function that checks the divs created from the start of the game for an id match
 buyVowelButton = document.getElementById('buyVowel').addEventListener('click', playerBuy);
 
->>>>>>> master
 //button, returns a randomly chosen object from wheelArray
 spinTheWheelButton = document.getElementById('spin').addEventListener('click', randomWheelPick);
 
