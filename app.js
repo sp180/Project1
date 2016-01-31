@@ -31,6 +31,7 @@ var playerOne = {score:0};
 var playerTwo = {score:0};
 var playerThree = {score:0};
 
+// default visibility
 document.getElementById('spin').style.visibility = 'hidden';
 document.getElementById('guessLetter').style.visibility = 'hidden';
 document.getElementById('letterInputField').style.visibility = 'hidden';
@@ -39,7 +40,7 @@ document.getElementById('phraseInputField').style.visibility = 'hidden';
 document.getElementById('buyVowel').style.visibility = 'hidden';
 document.getElementById('vowelInputField').style.visibility = 'hidden';
 
-//function, make only wheel button visible
+// function, make only wheel button visible
 var showOnlyWheelButton = function () {
   document.getElementById('spin').style.visibility = 'visible';
   document.getElementById('guessLetter').style.visibility = 'hidden';
@@ -50,16 +51,16 @@ var showOnlyWheelButton = function () {
   document.getElementById('vowelInputField').style.visibility = 'hidden';
 }
 
-//function, starts a new game by picking a phrase and putting it on the board
+// function, starts a new game by picking a phrase and putting it on the board
 var startingGame = function () {
 
-  //function, picks a random phrase object for the board
+  // function, picks a random phrase object for the board
   var randomPhrasePick = function () {
     theChosenPhrase = phraseBankArray[Math.floor(Math.random()*phraseBankArray.length)];
   }
   randomPhrasePick();
 
-  //function, populates the board with the characters of theChosenPhrase
+  // function, populates the board with the characters of theChosenPhrase
   var populateTheBoard = function () {
     theBoard = theChosenPhrase.split('');
     var boardDiv = document.getElementById('board');
@@ -83,7 +84,7 @@ var startingGame = function () {
   document.getElementById('spin').style.visibility = 'visible';
 }
 
-//function, picks a random money object for player points
+// function, picks a random money object for player points
 var randomWheelPick = function () {
   theWheelPick = wheelArray[Math.floor(Math.random()*wheelArray.length)];
   console.log('The spinner stops on '+theWheelPick);
@@ -97,7 +98,7 @@ var randomWheelPick = function () {
   document.getElementById('wheelValue').textContent = 'Current Wheel Value: '+theWheelPick;
 }
 
-//function, changes current player turn to next player
+// function, changes current player turn to next player
 var playerTurnSwitch = function () {
   if (currentPlayerTurn == 'Player One') {
     currentPlayerTurn = 'Player Two';
@@ -116,7 +117,7 @@ var playerTurnSwitch = function () {
   }
 }
 
-//function, adds to current player score
+// function, adds to current player score
 var addToPlayerScore = function () {
   if (currentPlayerTurn == 'Player One') {
     playerOne.score += parseFloat(theWheelPick);
@@ -129,7 +130,7 @@ var addToPlayerScore = function () {
   }
 }
 
-//function, subtracts from current player score
+// function, subtracts from current player score
 var subtractFromPlayerScore = function () {
   if (currentPlayerTurn == 'Player One') {
     playerOne.score -= parseFloat(theWheelPick);
@@ -151,7 +152,7 @@ var subtractFromPlayerScore = function () {
   }
 }
 
-//function, checks if a consonant a player has chosen is on the board or not
+// function, checks if a consonant a player has chosen is on the board or not
 var playerChoice = function () {
   var checkForMatch = function(element, index, array) {
     return element == letterInput.value.toUpperCase();
@@ -184,7 +185,7 @@ var playerChoice = function () {
   }
 }
 
-//function, checks if a vowel a player has chosen is on the board or not
+// function, checks if a vowel a player has chosen is on the board or not
 var playerBuy = function () {
   var checkForMatch = function(element, index, array) {
     return element == vowelInput.value.toUpperCase();
@@ -217,7 +218,7 @@ var playerBuy = function () {
   }
 }
 
-//function, checks if a phrase a player has guessed is on the board or not
+// function, checks if a phrase a player has guessed is on the board or not
 var solveThePuzzle = function () {
   var tileDivs = document.getElementsByClassName('tile');
   if (phraseInput.value.toUpperCase() == theChosenPhrase) {
@@ -233,26 +234,26 @@ var solveThePuzzle = function () {
   }
 }
 
-//function, to display current turn and scores
+// function, to display current turn and scores
 document.getElementById('currentTurn').textContent = 'Current Turn: '+currentPlayerTurn;
 document.getElementById('wheelValue').textContent = 'Current Wheel Value: 0';
 document.getElementById('player1score').textContent = 'Player One Score: '+playerOne.score;
 document.getElementById('player2score').textContent = 'Player Two Score: '+playerTwo.score;
 document.getElementById('player3score').textContent = 'Player Three Score: '+playerThree.score;
 
-//button, starts the game
+// button, starts the game
 startButton = document.getElementById('start').addEventListener('click', startingGame);
 
-//button, checks the letter input field for a letter and then executes a function that checks the divs created from the start of the game for an id match
+// button, checks the letter input field for a letter and then executes a function that checks the divs created from the start of the game for an id match
 guessLetterButton = document.getElementById('guessLetter').addEventListener('click', playerChoice);
 
-//button, checks the phrase input field for a phrase and then executes a function that checks the phrase formed by the div id's which were created from the start of the game
+// button, checks the phrase input field for a phrase and then executes a function that checks the phrase formed by the div id's which were created from the start of the game
 guessPhraseButton = document.getElementById('guessPhrase').addEventListener('click', solveThePuzzle);
 
-//button, checks the buy a vowel input field for a vowel and then executes a function that checks the divs created from the start of the game for an id match
+// button, checks the buy a vowel input field for a vowel and then executes a function that checks the divs created from the start of the game for an id match
 buyVowelButton = document.getElementById('buyVowel').addEventListener('click', playerBuy);
 
-//button, returns a randomly chosen object from wheelArray
+// button, returns a randomly chosen object from wheelArray
 spinTheWheelButton = document.getElementById('spin').addEventListener('click', randomWheelPick);
 
 
@@ -262,4 +263,4 @@ spinTheWheelButton = document.getElementById('spin').addEventListener('click', r
 
 
 
-//.
+// .
