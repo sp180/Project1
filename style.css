@@ -4,9 +4,11 @@
   margin-right: auto;
   text-align: center;
 }
-/*figure out how to align and contain .tile divs within the #board*/
+/* figure out how to align and contain .tile divs within the #board */
 #board {
-  border: 1px solid black;
+  border: 10px solid #9D9B8E;
+  box-shadow: 0 0 3px #05121B, inset 0 0 3px #05121B;
+  border-radius: 10px;
   margin: auto;
   height: 400px;
   width: 800px;
@@ -24,11 +26,19 @@
   float: left;
 }
 
+body {
+  background-size: 100% 100%;
+}
+
 h1 {
   text-align: center;
+  color: #9D9B8E;
+  text-shadow: -1px 0 #05121B, 0 1px #05121B, 1px 0 #05121B, 0 -1px #05121B;
 }
 
 ul {
   list-style: none;
   text-align: center;
+  color: #9D9B8E;
+  text-shadow: -1px 0 #05121B, 0 1px #05121B, 1px 0 #05121B, 0 -1px #05121B;
 }
