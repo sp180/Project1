@@ -17,7 +17,9 @@
 }
 
 .tile {
-  border: 1px solid black;
+  border: 1px solid #05121B;
+  color: #05121B;
+  background-color: #9D9B8E;
   font-size: 25px;
   width: 30px;
   height: 30px;
