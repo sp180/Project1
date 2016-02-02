@@ -6,7 +6,8 @@
 }
 /* figure out how to align and contain .tile divs within the #board */
 #board {
-  border: 10px solid #9D9B8E;
+  background: rgba(4,10,22,0.65);
+  border: 10px solid rgba(157, 155, 142, 0.85);
   box-shadow: 0 0 3px #05121B, inset 0 0 3px #05121B;
   border-radius: 10px;
   margin: auto;
@@ -33,17 +34,23 @@ body {
 }
 
 h1 {
+  border: 10px solid rgba(157, 155, 142, 0.85);
+  box-shadow: 0 0 3px #05121B, inset 0 0 3px #05121B;
+  border-radius: 10px;
+  background: rgba(5,14,30,.65);
+  margin-left: 310px;
+  margin-right: 310px;
   text-align: center;
   color: #9D9B8E;
   text-shadow: -1px 0 #05121B, 0 1px #05121B, 1px 0 #05121B, 0 -1px #05121B;
 }
 
 ul {
-  border: 10px solid #9D9B8E;
+  border: 10px solid rgba(157, 155, 142, 0.85);
   box-shadow: 0 0 3px #05121B, inset 0 0 3px #05121B;
   border-radius: 10px;
   width: 200px;
-  margin-left: 350px;
+  margin-left: 345px;
   padding-left: 0px;
   height: 90px;
   list-style: none;
