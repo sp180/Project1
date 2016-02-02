@@ -39,7 +39,15 @@ h1 {
 }
 
 ul {
+  border: 10px solid #9D9B8E;
+  box-shadow: 0 0 3px #05121B, inset 0 0 3px #05121B;
+  border-radius: 10px;
+  width: 200px;
+  margin-left: 350px;
+  padding-left: 0px;
+  height: 90px;
   list-style: none;
+  background: rgba(5,14,30,.65);
   text-align: center;
   color: #9D9B8E;
   text-shadow: -1px 0 #05121B, 0 1px #05121B, 1px 0 #05121B, 0 -1px #05121B;
