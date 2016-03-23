@@ -31,6 +31,7 @@ var playerOne = {score:0};
 var playerTwo = {score:0};
 var playerThree = {score:0};
 
+//borrowed code for custom alert box
 var ALERT_TITLE = "Message";
 var ALERT_BUTTON_TEXT = "Ok";
 
@@ -69,14 +70,10 @@ function createCustomAlert(txt) {
 	btn.onclick = function() { removeCustomAlert();return false; }
 
 	alertObj.style.display = "block";
-
 }
 
 function removeCustomAlert() {
 	document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
-}
-function ful(){
-alert('Alert this pages');
 }
 
 // default visibility
