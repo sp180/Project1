@@ -87,7 +87,7 @@ var startingGame = function () {
 // function, picks a random money object for player points
 var randomWheelPick = function () {
   theWheelPick = wheelArray[Math.floor(Math.random()*wheelArray.length)];
-  console.log('The spinner stops on '+theWheelPick);
+  alert('The spinner stops on '+theWheelPick);
   document.getElementById('spin').style.visibility = 'hidden';
   document.getElementById('guessLetter').style.visibility = 'visible';
   document.getElementById('letterInputField').style.visibility = 'visible';
@@ -103,17 +103,17 @@ var playerTurnSwitch = function () {
   if (currentPlayerTurn == 'Player One') {
     currentPlayerTurn = 'Player Two';
     document.getElementById('currentTurn').textContent = 'Current Turn: '+currentPlayerTurn;
-    console.log('current turn: Player Two');
+    alert('current turn: Player Two');
   }
   else if (currentPlayerTurn == 'Player Two') {
     currentPlayerTurn = 'Player Three';
     document.getElementById('currentTurn').textContent = 'Current Turn: '+currentPlayerTurn;
-    console.log('current turn: Player Three');
+    alert('current turn: Player Three');
   }
   else if (currentPlayerTurn == 'Player Three') {
     currentPlayerTurn = 'Player One';
     document.getElementById('currentTurn').textContent = 'Current Turn: '+currentPlayerTurn;
-    console.log('current turn: Player One');
+    alert('current turn: Player One');
   }
 }
 
@@ -158,15 +158,15 @@ var playerChoice = function () {
     return element == letterInput.value.toUpperCase();
   }
   if (consonantsArray.some(checkForMatch) == false) {
-    console.log('Please pick a consonant');
+    alert('Please pick a consonant');
   }
   else if (guessedLettersArray.some(checkForMatch) == true) {
-    console.log('Sorry, that is already on the board');
+    alert('Sorry, that is already on the board');
     playerTurnSwitch();
     showOnlyWheelButton();
   }
   else if (phraseLettersArray.some(checkForMatch) == false) {
-    console.log('Sorry, that is not on the board');
+    alert('Sorry, that is not on the board');
     playerTurnSwitch();
     showOnlyWheelButton();
   }
@@ -191,15 +191,15 @@ var playerBuy = function () {
     return element == vowelInput.value.toUpperCase();
   }
   if (vowelsArray.some(checkForMatch) == false) {
-    console.log('Please pick a vowel');
+    alert('Please pick a vowel');
   }
   else if (guessedLettersArray.some(checkForMatch) == true) {
-    console.log('Sorry, that is already on the board');
+    alert('Sorry, that is already on the board');
     playerTurnSwitch();
     showOnlyWheelButton();
   }
   else if (phraseLettersArray.some(checkForMatch) == false) {
-    console.log('Sorry, that is not on the board');
+    alert('Sorry, that is not on the board');
     playerTurnSwitch();
     showOnlyWheelButton();
   }
@@ -222,13 +222,13 @@ var playerBuy = function () {
 var solveThePuzzle = function () {
   var tileDivs = document.getElementsByClassName('tile');
   if (phraseInput.value.toUpperCase() == theChosenPhrase) {
-    console.log('Congratulations, '+currentPlayerTurn+' wins');
+    alert('Congratulations, '+currentPlayerTurn+' wins');
     for (var i = 0; i < tileDivs.length; i++) {
       tileDivs[i].textContent = tileDivs[i].id;
     }
   }
   else if (phraseInput.value.toUpperCase() != theChosenPhrase) {
-    console.log('Sorry, guess again');
+    alert('Sorry, guess again');
     playerTurnSwitch();
     showOnlyWheelButton();
   }
